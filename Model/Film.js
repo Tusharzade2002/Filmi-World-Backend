@@ -8,5 +8,7 @@ import {model ,Schema} from 'mongoose'
     rating:Number,
     Language:String
  },{timestamps:true});
+
  const Film =model ("Film",filmschema);
+ 
  export default Film

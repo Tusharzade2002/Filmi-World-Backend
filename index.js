@@ -22,13 +22,16 @@ const PORT = process.env.PORT
 
 app.get("/",getHome)
 app.get("/health",Healthcheck)
+
 app.post("/films" ,postFilmsData)
 app.get("/films",getFilmsData)
 app.get("/films/:id",getFilmById)
 app.delete("/films/:id" ,DeleteFilmById)
 app.put("/films/:id",UpdateFilmById)
 app.patch("/films/rating/:id",UpdateRatingById)
+
 app.get("*",GetNotFound)
+
 app.listen(PORT,()=>{
     console.log(`server is running on ${PORT}`);
     ConnectDB();
